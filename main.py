@@ -343,6 +343,7 @@ def write_output(last_node, nodes_in_mem, max_nodes_in_mem, my_start_time, file)
         f_index = 0
         for frog in info:
             if old_leaf[f_index] == mal_id:
+                f_index += 1
                 continue
             if info == start and info_extra == start_extra:
                 file.write(frog[0] + " se afla pe frunza initiala " + frog[1] + ". Greutate broscuta " + str(
