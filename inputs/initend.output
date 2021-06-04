@@ -1,0 +1,149 @@
+Rezultate cu A*:
+Cu euristica banala.
+Timp total executie: 0.0
+0)
+Broasca se afla pe frunza initiala mal. Greutate broscuta 3
+Broscoi se afla pe frunza initiala mal. Greutate broscuta 4
+Stare frunze: [['id0', 0.0, 0.0, 1, 3.0], ['id1', 1.0, 4.0, 3, 5.0], ['id2', 3.0, 4.0, 6, 0.0]]
+Cost total: 0
+Noduri folosite de algoritm in total: 1
+Noduri folosite maxim in memorie la un moment dat de algoritm: 1
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica gresita.
+Timp total executie: 0.0
+0)
+Broasca se afla pe frunza initiala mal. Greutate broscuta 3
+Broscoi se afla pe frunza initiala mal. Greutate broscuta 4
+Stare frunze: [['id0', 0.0, 0.0, 1, 3.0], ['id1', 1.0, 4.0, 3, 5.0], ['id2', 3.0, 4.0, 6, 0.0]]
+Cost total: 1024.0
+Noduri folosite de algoritm in total: 1
+Noduri folosite maxim in memorie la un moment dat de algoritm: 1
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica care tine cont de distanta catre mal.
+Timp total executie: 0.0
+0)
+Broasca se afla pe frunza initiala mal. Greutate broscuta 3
+Broscoi se afla pe frunza initiala mal. Greutate broscuta 4
+Stare frunze: [['id0', 0.0, 0.0, 1, 3.0], ['id1', 1.0, 4.0, 3, 5.0], ['id2', 3.0, 4.0, 6, 0.0]]
+Cost total: 0.0
+Noduri folosite de algoritm in total: 1
+Noduri folosite maxim in memorie la un moment dat de algoritm: 1
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica care tine cont de cea mai apropiata frunza (sau mal).
+Timp total executie: 0.0
+0)
+Broasca se afla pe frunza initiala mal. Greutate broscuta 3
+Broscoi se afla pe frunza initiala mal. Greutate broscuta 4
+Stare frunze: [['id0', 0.0, 0.0, 1, 3.0], ['id1', 1.0, 4.0, 3, 5.0], ['id2', 3.0, 4.0, 6, 0.0]]
+Cost total: 0.0
+Noduri folosite de algoritm in total: 1
+Noduri folosite maxim in memorie la un moment dat de algoritm: 1
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Rezultate cu A* optim:
+Cu euristica banala.
+Timp total executie: 0.0
+0)
+Broasca se afla pe frunza initiala mal. Greutate broscuta 3
+Broscoi se afla pe frunza initiala mal. Greutate broscuta 4
+Stare frunze: [['id0', 0.0, 0.0, 1, 3.0], ['id1', 1.0, 4.0, 3, 5.0], ['id2', 3.0, 4.0, 6, 0.0]]
+Cost total: 0
+Noduri folosite de algoritm in total: 1
+Noduri folosite maxim in memorie la un moment dat de algoritm: 1
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica gresita.
+Timp total executie: 0.0010027885437011719
+0)
+Broasca se afla pe frunza initiala mal. Greutate broscuta 3
+Broscoi se afla pe frunza initiala mal. Greutate broscuta 4
+Stare frunze: [['id0', 0.0, 0.0, 1, 3.0], ['id1', 1.0, 4.0, 3, 5.0], ['id2', 3.0, 4.0, 6, 0.0]]
+Cost total: 1024.0
+Noduri folosite de algoritm in total: 1
+Noduri folosite maxim in memorie la un moment dat de algoritm: 1
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica care tine cont de distanta catre mal.
+Timp total executie: 0.0
+0)
+Broasca se afla pe frunza initiala mal. Greutate broscuta 3
+Broscoi se afla pe frunza initiala mal. Greutate broscuta 4
+Stare frunze: [['id0', 0.0, 0.0, 1, 3.0], ['id1', 1.0, 4.0, 3, 5.0], ['id2', 3.0, 4.0, 6, 0.0]]
+Cost total: 0.0
+Noduri folosite de algoritm in total: 1
+Noduri folosite maxim in memorie la un moment dat de algoritm: 1
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica care tine cont de cea mai apropiata frunza (sau mal).
+Timp total executie: 0.0
+0)
+Broasca se afla pe frunza initiala mal. Greutate broscuta 3
+Broscoi se afla pe frunza initiala mal. Greutate broscuta 4
+Stare frunze: [['id0', 0.0, 0.0, 1, 3.0], ['id1', 1.0, 4.0, 3, 5.0], ['id2', 3.0, 4.0, 6, 0.0]]
+Cost total: 0.0
+Noduri folosite de algoritm in total: 1
+Noduri folosite maxim in memorie la un moment dat de algoritm: 1
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Rezultate cu IDA*:
+Cu euristica banala.
+Timp total executie: 0.0
+0)
+Broasca se afla pe frunza initiala mal. Greutate broscuta 3
+Broscoi se afla pe frunza initiala mal. Greutate broscuta 4
+Stare frunze: [['id0', 0.0, 0.0, 1, 3.0], ['id1', 1.0, 4.0, 3, 5.0], ['id2', 3.0, 4.0, 6, 0.0]]
+Cost total: 0
+Noduri folosite de algoritm in total: 1
+Noduri folosite maxim in memorie la un moment dat de algoritm: 1
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica gresita.
+Timp total executie: 0.0
+0)
+Broasca se afla pe frunza initiala mal. Greutate broscuta 3
+Broscoi se afla pe frunza initiala mal. Greutate broscuta 4
+Stare frunze: [['id0', 0.0, 0.0, 1, 3.0], ['id1', 1.0, 4.0, 3, 5.0], ['id2', 3.0, 4.0, 6, 0.0]]
+Cost total: 1024.0
+Noduri folosite de algoritm in total: 1
+Noduri folosite maxim in memorie la un moment dat de algoritm: 1
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica care tine cont de distanta catre mal.
+Timp total executie: 0.0
+0)
+Broasca se afla pe frunza initiala mal. Greutate broscuta 3
+Broscoi se afla pe frunza initiala mal. Greutate broscuta 4
+Stare frunze: [['id0', 0.0, 0.0, 1, 3.0], ['id1', 1.0, 4.0, 3, 5.0], ['id2', 3.0, 4.0, 6, 0.0]]
+Cost total: 0.0
+Noduri folosite de algoritm in total: 1
+Noduri folosite maxim in memorie la un moment dat de algoritm: 1
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica care tine cont de cea mai apropiata frunza (sau mal).
+Timp total executie: 0.0
+0)
+Broasca se afla pe frunza initiala mal. Greutate broscuta 3
+Broscoi se afla pe frunza initiala mal. Greutate broscuta 4
+Stare frunze: [['id0', 0.0, 0.0, 1, 3.0], ['id1', 1.0, 4.0, 3, 5.0], ['id2', 3.0, 4.0, 6, 0.0]]
+Cost total: 0.0
+Noduri folosite de algoritm in total: 1
+Noduri folosite maxim in memorie la un moment dat de algoritm: 1
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Rezultate cu UCS:
+Timp total executie: 0.0
+0)
+Broasca se afla pe frunza initiala mal. Greutate broscuta 3
+Broscoi se afla pe frunza initiala mal. Greutate broscuta 4
+Stare frunze: [['id0', 0.0, 0.0, 1, 3.0], ['id1', 1.0, 4.0, 3, 5.0], ['id2', 3.0, 4.0, 6, 0.0]]
+Cost total: 0
+Noduri folosite de algoritm in total: 1
+Noduri folosite maxim in memorie la un moment dat de algoritm: 1
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
