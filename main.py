@@ -2,7 +2,6 @@ import copy
 import numpy as np
 import os
 import time
-from multiprocessing import Process
 from threading import Timer, Thread, Event
 import sys
 
@@ -81,6 +80,15 @@ class Euristici:
     def __init__(self):
         pass
 
+    """
+        Functie care face apelarea diferitelor euristici mult mai la indemana.
+        Argumente:
+        gr = graful generat de algoritm
+        info = informatia de pe nodul ce trebuie estimat
+        which = un int, care reprezinta indicele euristicii apelate (indicii sunt definiti
+                                                                    in clasa wrapper)
+        Returneaza valoarea euristicii din which, aplicata la nodul info.
+    """
     @staticmethod
     def call_heuristic(gr, info, which):
         if which == Euristici.EURISTICA_BANALA:
@@ -89,7 +97,7 @@ class Euristici:
             return gr.calculeaza_h_wrong(info)
         elif which == Euristici.EURISTICA_BUNA_1:
             return gr.calculeaza_h1(info)
-        else:
+        elif which == Euristici.EURISTICA_BUNA_2:
             return gr.calculeaza_h2(info)
 
 
@@ -149,6 +157,11 @@ class Graph:  # graful problemei
     def indiceNod(self, n):
         return self.noduri.index(n)
 
+    """
+        Metoda care verifica daca un state dat este valid, adica daca s-ar putea ajunge la mal din
+        el. Argumentele sunt informatiile despre state.
+        Returneaza o valoare booleana, care indica daca este un state invalid (sau nu).
+    """
     # verifica daca e un state din care ar fi imposibil sa ajunga la mal, caz in care il ignora
     def bad_state(self, info, info_extra):
         frogs = info
@@ -190,6 +203,21 @@ class Graph:  # graful problemei
                 return True
         return False
 
+
+    """
+        Am folosit o metoda auxiliara pentru generarea succesorilor, pentru a nu incarca metoda
+        de la laborator cu argumente. Este folosit un approach de tip backtracking, pentru a genera
+        toate posibilitatile din starea curenta. Starile invalide sunt ignorate.
+        Argumente:
+            succ = lista de succesori, va fi modificata la "final" de metoda
+            current, current_extra = ce a fost generat din noul state pana la apelul curent al
+                                     metodei
+            g = g-ul de pana acum
+            frogs = broastele care inca nu au fost tratate de metoda
+            info_extra = informatiile extra (greutate si frunze) care inca nu au fost tratate de metoda
+            euristica = ce euristica sa fie folosita
+        Nu returneaza nimic, dar daca trece prin toate broastele, adauga in lista succ starea generata.
+    """
     # e o functie recursiva, face un fel de backtracking ca sa genereze toate posibilitatile de unde ma aflu
     def generate_all_succ(self, succ, current, current_extra, g, frogs, info_extra, euristica):
         leaves = copy.deepcopy(info_extra[-1])
@@ -242,7 +270,7 @@ class Graph:  # graful problemei
                     break
         else:
             self.generate_all_succ(succ, current + [[frog[0], mal_id]],
-                                   current_extra + [greutate - 1],
+                                   current_extra + [greutate],
                                    g,
                                    frogs[1:], info_extra[1:-1] + [leaves],
                                    euristica)
@@ -325,11 +353,21 @@ def in_list(nod_info, nod_info_extra, lista):
 
 def insert(node, lista):
     idx = 0
-    while idx < len(lista) and (node.f > lista[idx].f or (node.f == lista[idx].f and node.g < lista[idx].g)):
+    while idx < len(lista) and (node.f > lista[idx].f or (node.f == lista[idx].f and node.g > lista[idx].g)):
         idx += 1
     lista.insert(idx, node)
 
 
+"""
+    Functie utility care scrie in fisierul file datele trimise.
+    Argumente:
+        last_node = ultimul nod din drumul gasit
+        nodes_in_mem = numarul total de noduri generate
+        max_nodes_in_mem = numarul maxim de noduri in memorie la un moment dat
+        my_start_time = momentul la care a fost apelat algoritmul respectiv
+        file = fisierul in care sa scrie
+    Nu returneaza nimic.
+"""
 def write_output(last_node, nodes_in_mem, max_nodes_in_mem, my_start_time, file):
     drum, nodes = last_node.obtineDrum()
     node_ind = 0
@@ -365,6 +403,13 @@ def write_output(last_node, nodes_in_mem, max_nodes_in_mem, my_start_time, file)
     file.write("-"*150 + "\n")
     file.flush()
 
+"""
+    Functie utility care doar scrie mesajul din msg in file.
+    Argumente:
+        msg = un string
+        file = fisierul in care sa scrie
+    Nu returneaza nimic.
+"""
 def write_message(msg, file):
     file.write(msg)
     file.flush()
@@ -377,14 +422,18 @@ def a_star_optim(euristica):
     my_start_time = time.time()
     open = [NodParcurgere(start, start_extra, None, 0, Euristici.call_heuristic(gr, start, euristica))]
     closed = []
+    max_mem = None
 
     while len(open) > 0:
+        if max_mem is None or len(open) + len(closed) > max_mem:
+            max_mem = len(open) + len(closed)
+
         current = open.pop(0)
         closed.append(current)
         if current.info == scopuri:
             if time.time() - my_start_time > timeout:
                 sys.exit()
-            write_output(current, len(open) + len(closed), len(open) + len(closed), my_start_time, output)
+            write_output(current, len(open) + len(closed), max_mem, my_start_time, output)
             nrSolutiiCautate -= 1
         if nrSolutiiCautate == 0:
             break
@@ -422,15 +471,18 @@ def a_star(euristica):
     continua = True
     c = [NodParcurgere(start, start_extra, None, 0, Euristici.call_heuristic(gr, start, euristica))]
     pasi = 0
+    max_mem = None
 
     while len(c) > 0 and continua:
 
+        if max_mem is None or len(c) > max_mem:
+            max_mem = len(c)
         nod = c.pop(0)
         pasi += 1
         if nod.info == scopuri:
             if time.time() - my_start_time > timeout:
                 sys.exit()
-            write_output(nod, len(c) + pasi, len(c) + pasi, my_start_time, output)
+            write_output(nod, len(c) + pasi, max_mem, my_start_time, output)
             nrSolutiiCautate = nrSolutiiCautate - 1
         if nrSolutiiCautate == 0:
             continua = False
@@ -445,7 +497,7 @@ def a_star(euristica):
             newNod = NodParcurgere(nodInfo, nodInfoExtra, nod, g, h + g)
             insert(newNod, c)
 
-def construieste_drum(nodCurent: NodParcurgere, nodes_so_far, mem_max, limita, euristica, my_start_time):
+def construieste_drum(nodCurent: NodParcurgere, nodes_so_far, all_nodes, mem_max, limita, euristica, my_start_time):
     global timeout
 
     if nodCurent.f > limita:
@@ -453,7 +505,7 @@ def construieste_drum(nodCurent: NodParcurgere, nodes_so_far, mem_max, limita, e
     if nodCurent.info == scopuri:
         if time.time() - my_start_time > timeout:
             sys.exit()
-        write_output(nodCurent, nodes_so_far, max(mem_max, nodes_so_far), my_start_time, output)
+        write_output(nodCurent, nodes_so_far + all_nodes, max(mem_max, nodes_so_far), my_start_time, output)
         return (True, nodCurent.f, nodes_so_far)
     succ = gr.genereazaSuccesori(nodCurent, euristica)
     if time.time() - my_start_time > timeout:
@@ -461,7 +513,7 @@ def construieste_drum(nodCurent: NodParcurgere, nodes_so_far, mem_max, limita, e
     minif = float('inf')
     for (info, info_extra, h, g) in succ:
         ajuns, f, nodes_so_far = construieste_drum(NodParcurgere(info, info_extra, nodCurent, g, g + h), nodes_so_far + 1,
-                                                   mem_max, limita, euristica, my_start_time)
+                                                   all_nodes, mem_max, limita, euristica, my_start_time)
         if ajuns:
             return (True,f, nodes_so_far)
         minif = min(minif, f)
@@ -479,7 +531,7 @@ def ida_star(euristica):
     total_nodes = 0
     max_at_point = 0
     while True:
-        ajuns, limita, current_nodes = construieste_drum(st, 1, max_at_point, limita, euristica, my_start_time)
+        ajuns, limita, current_nodes = construieste_drum(st, 1, total_nodes, max_at_point, limita, euristica, my_start_time)
         if time.time() - my_start_time > timeout:
             sys.exit()
         total_nodes += current_nodes
@@ -497,14 +549,17 @@ def uniform_cost(gr):
     queue = [NodParcurgere(start, start_extra, None, 0, 0)]
     my_start_time = time.time()
     pasi = 0
+    max_mem = None
     while len(queue) > 0:
+        if max_mem is None or len(queue) > max_mem:
+            max_mem = len(queue)
         curr = queue[0]
         queue.pop(0)
         pasi += 1
         if curr.info == scopuri:
             if time.time() - my_start_time > timeout:
                 sys.exit()
-            write_output(curr, len(queue) + pasi, len(queue) + pasi, my_start_time, output)
+            write_output(curr, len(queue) + pasi, max_mem, my_start_time, output)
             break
         listasuccesori = gr.genereazaSuccesori(curr, Euristici.EURISTICA_BANALA)
         if time.time() - my_start_time > timeout:
@@ -535,7 +590,7 @@ if __name__ == "__main__":
             print(start_time, timeout)
             t = Thread(target=a_star, args=(euristica,))
             t.start()
-            t.join(timeout) # + 20 pt scrieri
+            t.join(timeout)
             print(time.time() - start_time, timeout)
             if time.time() - start_time >= timeout:
                 write_message("A fost depasit timeout-ul!\n", output)

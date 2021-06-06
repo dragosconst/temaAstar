@@ -1,0 +1,253 @@
+Rezultate cu A*:
+Cu euristica banala.
+Timp total executie: 11.784096717834473
+0)
+Broscoi se afla pe frunza initiala id0. Greutate broscuta 1
+Stare frunze: [['id0', 0.0, 0.0, 6, 9.0], ['id2', -2.0, 0.0, 6, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+1)
+Broscoi a mancat 6 insecte. Broscoi a sarit de la id0 la id2. Greutate broscuta 6
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 6, 9.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+2)
+Broscoi a mancat 3 insecte. Broscoi a sarit de la id2 la id3. Greutate broscuta 8
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 3, 15.0], ['id3', -5.0, 0.0, 7, 12.0], ['id4', -4.0, -1.0, 7, 50.0]]
+3)
+Broscoi a mancat 7 insecte. Broscoi a sarit de la id3 la mal. Greutate broscuta 14
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 3, 15.0], ['id3', -5.0, 0.0, 0, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+Cost total: 8.0
+Noduri folosite de algoritm in total: 16886
+Noduri folosite maxim in memorie la un moment dat de algoritm: 15457
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica gresita.
+Timp total executie: 0.014035463333129883
+0)
+Broscoi se afla pe frunza initiala id0. Greutate broscuta 1
+Stare frunze: [['id0', 0.0, 0.0, 6, 9.0], ['id2', -2.0, 0.0, 6, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+1)
+Broscoi a mancat 5 insecte. Broscoi a sarit de la id0 la id2. Greutate broscuta 5
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 6, 10.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+2)
+Broscoi a mancat 6 insecte. Broscoi a sarit de la id2 la id4. Greutate broscuta 10
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 0, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 40.0]]
+3)
+Broscoi a mancat 7 insecte. Broscoi a sarit de la id4 la mal. Greutate broscuta 16
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 0, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 0, 50.0]]
+Cost total: 8.112962351882128
+Noduri folosite de algoritm in total: 247
+Noduri folosite maxim in memorie la un moment dat de algoritm: 169
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica care tine cont de distanta catre mal.
+Timp total executie: 0.008035421371459961
+0)
+Broscoi se afla pe frunza initiala id0. Greutate broscuta 1
+Stare frunze: [['id0', 0.0, 0.0, 6, 9.0], ['id2', -2.0, 0.0, 6, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+1)
+Broscoi a mancat 6 insecte. Broscoi a sarit de la id0 la id2. Greutate broscuta 6
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 6, 9.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+2)
+Broscoi a mancat 3 insecte. Broscoi a sarit de la id2 la id3. Greutate broscuta 8
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 3, 15.0], ['id3', -5.0, 0.0, 7, 12.0], ['id4', -4.0, -1.0, 7, 50.0]]
+3)
+Broscoi a mancat 7 insecte. Broscoi a sarit de la id3 la mal. Greutate broscuta 14
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 3, 15.0], ['id3', -5.0, 0.0, 0, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+Cost total: 8.0
+Noduri folosite de algoritm in total: 192
+Noduri folosite maxim in memorie la un moment dat de algoritm: 182
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica care tine cont de cea mai apropiata frunza (sau mal).
+Timp total executie: 0.6135241985321045
+0)
+Broscoi se afla pe frunza initiala id0. Greutate broscuta 1
+Stare frunze: [['id0', 0.0, 0.0, 6, 9.0], ['id2', -2.0, 0.0, 6, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+1)
+Broscoi a mancat 6 insecte. Broscoi a sarit de la id0 la id2. Greutate broscuta 6
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 6, 9.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+2)
+Broscoi a mancat 3 insecte. Broscoi a sarit de la id2 la id3. Greutate broscuta 8
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 3, 15.0], ['id3', -5.0, 0.0, 7, 12.0], ['id4', -4.0, -1.0, 7, 50.0]]
+3)
+Broscoi a mancat 7 insecte. Broscoi a sarit de la id3 la mal. Greutate broscuta 14
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 3, 15.0], ['id3', -5.0, 0.0, 0, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+Cost total: 8.0
+Noduri folosite de algoritm in total: 3420
+Noduri folosite maxim in memorie la un moment dat de algoritm: 3229
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Rezultate cu A* optim:
+Cu euristica banala.
+Timp total executie: 5.787827253341675
+0)
+Broscoi se afla pe frunza initiala id0. Greutate broscuta 1
+Stare frunze: [['id0', 0.0, 0.0, 6, 9.0], ['id2', -2.0, 0.0, 6, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+1)
+Broscoi a mancat 6 insecte. Broscoi a sarit de la id0 la id2. Greutate broscuta 6
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 6, 9.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+2)
+Broscoi a mancat 3 insecte. Broscoi a sarit de la id2 la id3. Greutate broscuta 8
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 3, 15.0], ['id3', -5.0, 0.0, 7, 12.0], ['id4', -4.0, -1.0, 7, 50.0]]
+3)
+Broscoi a mancat 7 insecte. Broscoi a sarit de la id3 la mal. Greutate broscuta 14
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 3, 15.0], ['id3', -5.0, 0.0, 0, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+Cost total: 8.0
+Noduri folosite de algoritm in total: 4955
+Noduri folosite maxim in memorie la un moment dat de algoritm: 4955
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica gresita.
+Timp total executie: 0.007983207702636719
+0)
+Broscoi se afla pe frunza initiala id0. Greutate broscuta 1
+Stare frunze: [['id0', 0.0, 0.0, 6, 9.0], ['id2', -2.0, 0.0, 6, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+1)
+Broscoi a mancat 5 insecte. Broscoi a sarit de la id0 la id2. Greutate broscuta 5
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 6, 10.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+2)
+Broscoi a mancat 6 insecte. Broscoi a sarit de la id2 la id4. Greutate broscuta 10
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 0, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 40.0]]
+3)
+Broscoi a mancat 7 insecte. Broscoi a sarit de la id4 la mal. Greutate broscuta 16
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 0, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 0, 50.0]]
+Cost total: 8.112962351882128
+Noduri folosite de algoritm in total: 87
+Noduri folosite maxim in memorie la un moment dat de algoritm: 87
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica care tine cont de distanta catre mal.
+Timp total executie: 0.00899958610534668
+0)
+Broscoi se afla pe frunza initiala id0. Greutate broscuta 1
+Stare frunze: [['id0', 0.0, 0.0, 6, 9.0], ['id2', -2.0, 0.0, 6, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+1)
+Broscoi a mancat 6 insecte. Broscoi a sarit de la id0 la id2. Greutate broscuta 6
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 6, 9.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+2)
+Broscoi a mancat 3 insecte. Broscoi a sarit de la id2 la id3. Greutate broscuta 8
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 3, 15.0], ['id3', -5.0, 0.0, 7, 12.0], ['id4', -4.0, -1.0, 7, 50.0]]
+3)
+Broscoi a mancat 7 insecte. Broscoi a sarit de la id3 la mal. Greutate broscuta 14
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 3, 15.0], ['id3', -5.0, 0.0, 0, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+Cost total: 8.0
+Noduri folosite de algoritm in total: 192
+Noduri folosite maxim in memorie la un moment dat de algoritm: 192
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica care tine cont de cea mai apropiata frunza (sau mal).
+Timp total executie: 0.7949109077453613
+0)
+Broscoi se afla pe frunza initiala id0. Greutate broscuta 1
+Stare frunze: [['id0', 0.0, 0.0, 6, 9.0], ['id2', -2.0, 0.0, 6, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+1)
+Broscoi a mancat 6 insecte. Broscoi a sarit de la id0 la id2. Greutate broscuta 6
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 6, 9.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+2)
+Broscoi a mancat 3 insecte. Broscoi a sarit de la id2 la id3. Greutate broscuta 8
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 3, 15.0], ['id3', -5.0, 0.0, 7, 12.0], ['id4', -4.0, -1.0, 7, 50.0]]
+3)
+Broscoi a mancat 7 insecte. Broscoi a sarit de la id3 la mal. Greutate broscuta 14
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 3, 15.0], ['id3', -5.0, 0.0, 0, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+Cost total: 8.0
+Noduri folosite de algoritm in total: 2662
+Noduri folosite maxim in memorie la un moment dat de algoritm: 2662
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Rezultate cu IDA*:
+Cu euristica banala.
+Timp total executie: 1.337315559387207
+0)
+Broscoi se afla pe frunza initiala id0. Greutate broscuta 1
+Stare frunze: [['id0', 0.0, 0.0, 6, 9.0], ['id2', -2.0, 0.0, 6, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+1)
+Broscoi a mancat 5 insecte. Broscoi a sarit de la id0 la id2. Greutate broscuta 5
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 6, 10.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+2)
+Broscoi a mancat 4 insecte. Broscoi a sarit de la id2 la id3. Greutate broscuta 8
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 2, 15.0], ['id3', -5.0, 0.0, 7, 12.0], ['id4', -4.0, -1.0, 7, 50.0]]
+3)
+Broscoi a mancat 1 insecte. Broscoi a sarit de la id3 la mal. Greutate broscuta 8
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 2, 15.0], ['id3', -5.0, 0.0, 6, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+Cost total: 8.0
+Noduri folosite de algoritm in total: 43835
+Noduri folosite maxim in memorie la un moment dat de algoritm: 16826
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica gresita.
+Timp total executie: 0.017996788024902344
+0)
+Broscoi se afla pe frunza initiala id0. Greutate broscuta 1
+Stare frunze: [['id0', 0.0, 0.0, 6, 9.0], ['id2', -2.0, 0.0, 6, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+1)
+Broscoi a mancat 5 insecte. Broscoi a sarit de la id0 la id2. Greutate broscuta 5
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 6, 10.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+2)
+Broscoi a mancat 2 insecte. Broscoi a sarit de la id2 la id4. Greutate broscuta 6
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 4, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 44.0]]
+3)
+Broscoi a mancat 6 insecte. Broscoi a sarit de la id4 la mal. Greutate broscuta 11
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 4, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 1, 50.0]]
+Cost total: 8.112962351882128
+Noduri folosite de algoritm in total: 341
+Noduri folosite maxim in memorie la un moment dat de algoritm: 226
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica care tine cont de distanta catre mal.
+Timp total executie: 0.0009622573852539062
+0)
+Broscoi se afla pe frunza initiala id0. Greutate broscuta 1
+Stare frunze: [['id0', 0.0, 0.0, 6, 9.0], ['id2', -2.0, 0.0, 6, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+1)
+Broscoi a mancat 5 insecte. Broscoi a sarit de la id0 la id2. Greutate broscuta 5
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 6, 10.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+2)
+Broscoi a mancat 4 insecte. Broscoi a sarit de la id2 la id3. Greutate broscuta 8
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 2, 15.0], ['id3', -5.0, 0.0, 7, 12.0], ['id4', -4.0, -1.0, 7, 50.0]]
+3)
+Broscoi a mancat 1 insecte. Broscoi a sarit de la id3 la mal. Greutate broscuta 8
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 2, 15.0], ['id3', -5.0, 0.0, 6, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+Cost total: 8.0
+Noduri folosite de algoritm in total: 14
+Noduri folosite maxim in memorie la un moment dat de algoritm: 13
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Cu euristica care tine cont de cea mai apropiata frunza (sau mal).
+Timp total executie: 0.2836599349975586
+0)
+Broscoi se afla pe frunza initiala id0. Greutate broscuta 1
+Stare frunze: [['id0', 0.0, 0.0, 6, 9.0], ['id2', -2.0, 0.0, 6, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+1)
+Broscoi a mancat 5 insecte. Broscoi a sarit de la id0 la id2. Greutate broscuta 5
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 6, 10.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+2)
+Broscoi a mancat 4 insecte. Broscoi a sarit de la id2 la id3. Greutate broscuta 8
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 2, 15.0], ['id3', -5.0, 0.0, 7, 12.0], ['id4', -4.0, -1.0, 7, 50.0]]
+3)
+Broscoi a mancat 1 insecte. Broscoi a sarit de la id3 la mal. Greutate broscuta 8
+Stare frunze: [['id0', 0.0, 0.0, 1, 10.0], ['id2', -2.0, 0.0, 2, 15.0], ['id3', -5.0, 0.0, 6, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+Cost total: 8.0
+Noduri folosite de algoritm in total: 6966
+Noduri folosite maxim in memorie la un moment dat de algoritm: 3301
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Rezultate cu UCS:
+Timp total executie: 12.131525754928589
+0)
+Broscoi se afla pe frunza initiala id0. Greutate broscuta 1
+Stare frunze: [['id0', 0.0, 0.0, 6, 9.0], ['id2', -2.0, 0.0, 6, 15.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+1)
+Broscoi a mancat 6 insecte. Broscoi a sarit de la id0 la id2. Greutate broscuta 6
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 6, 9.0], ['id3', -5.0, 0.0, 7, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+2)
+Broscoi a mancat 3 insecte. Broscoi a sarit de la id2 la id3. Greutate broscuta 8
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 3, 15.0], ['id3', -5.0, 0.0, 7, 12.0], ['id4', -4.0, -1.0, 7, 50.0]]
+3)
+Broscoi a mancat 7 insecte. Broscoi a sarit de la id3 la mal. Greutate broscuta 14
+Stare frunze: [['id0', 0.0, 0.0, 0, 10.0], ['id2', -2.0, 0.0, 3, 15.0], ['id3', -5.0, 0.0, 0, 20.0], ['id4', -4.0, -1.0, 7, 50.0]]
+Cost total: 8.0
+Noduri folosite de algoritm in total: 16886
+Noduri folosite maxim in memorie la un moment dat de algoritm: 15457
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
